@@ -1,0 +1,21 @@
+nav {
+  display      : flex;
+  flex-wrap    : wrap;
+  gap          : 15px;
+  margin-bottom: 25px;
+}
+
+nav a {
+  border-radius  : 4px;
+  padding        : 8px 15px;
+  margin-bottom  : 20px;
+  font-size      : 1rem;
+  font-weight    : bold;
+  background     : #eee;
+  color          : #000;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #ccc;
+}

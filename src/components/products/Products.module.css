@@ -1,0 +1,52 @@
+.gridContainer {
+  display              : grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap                  : 30px;
+}
+
+.productContainer {
+  cursor    : pointer;
+  transition: all 0.5s;
+}
+
+.productContainer:hover {
+  transform: scale(1.2);
+}
+
+.productImage>img {
+  width        : 100%;
+  height       : 100%;
+  border-radius: 8px;
+  animation    : show-right .5s forwards;
+}
+
+.productName {
+  text-align : left;
+  font-size  : 1.3rem;
+  margin-top : 0px;
+  animation  : show-left .5s forwards;
+}
+
+@keyframes show-left {
+  from {
+    opacity  : 0;
+    transform: translate3d(0, 0, -40px);
+  }
+
+  to {
+    opacity  : 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-right {
+  from {
+    opacity  : 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  to {
+    opacity  : 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
